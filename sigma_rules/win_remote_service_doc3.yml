@@ -1,0 +1,6 @@
+logsource:
+  product: windows
+  service: system
+detection:
+  selection2:
+    EventID: 7045

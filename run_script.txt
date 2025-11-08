@@ -1,0 +1,23 @@
+# Terminal 1: Kafka & Zookeeper
+cd backend
+docker-compose up -d
+
+# Terminal 2: Kafka Consumer (Existing - writes to MongoDB)
+cd backend
+python kafka_consumer.py
+
+# Terminal 3: Complete API (NEW - Authentication & Alerts)
+cd backend
+python siem_api_complete.py
+
+# Terminal 4: React Dashboard (NEW - Web UI)
+cd siem-dashboard
+npm start
+
+# Terminal 5: Winlogbeat (On Windows host)
+cd D:\SIEM-BEATS\winlogbeat
+.\winlogbeat.exe -c winlogbeat.yml
+
+# Terminal 6: CLI Viewer (Optional - existing tool)
+cd backend
+python logs_consumer.py

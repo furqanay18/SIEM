@@ -1,0 +1,12 @@
+logsource:
+  product: windows
+  service: sysmon
+detection:
+  selection1:
+    category: process_creation
+fields:
+- Image
+- OriginalFileName
+- ParentProcessGuid
+new_fields:
+- ImageFileName

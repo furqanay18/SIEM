@@ -1,0 +1,15 @@
+logsource:
+  product: windows
+  service: system
+detection:
+  selection:
+    EventID: 7045
+    ServiceName|contains:
+    - WCESERVICE
+    - WCE SERVICE
+    - winexesvc
+    - DumpSvc
+    - pwdump
+    - gsecdump
+    - cachedump
+  condition: 1 of them

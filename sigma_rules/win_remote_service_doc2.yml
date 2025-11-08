@@ -1,0 +1,6 @@
+logsource:
+  product: windows
+  service: security
+detection:
+  selection2:
+    EventID: 4697

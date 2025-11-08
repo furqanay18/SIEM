@@ -1,0 +1,9 @@
+logsource:
+  product: windows
+  service: sysmon
+detection:
+  selection2:
+    EventID: 11
+fields:
+- ProcessGuid
+- TargetFilename

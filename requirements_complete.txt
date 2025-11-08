@@ -1,0 +1,28 @@
+# Web Framework
+flask==3.0.0
+flask-cors==4.0.0
+flask-socketio==5.3.5
+
+# WebSocket Support
+python-socketio==5.10.0
+eventlet==0.33.3
+
+# Database
+pymongo==4.6.1
+
+# Kafka & Messaging
+kafka-python==2.0.2
+
+# Authentication & Security
+pyjwt==2.8.0
+bcrypt==4.1.2
+
+# Date/Time utilities
+python-dateutil==2.8.2
+
+# YAML processing
+pyyaml==6.0.1
+
+# Optional: For production
+#gunicorn==21.2.0
+#gevent==23.9.1

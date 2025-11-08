@@ -1,0 +1,32 @@
+logsource:
+  product: windows
+  service: sysmon
+detection:
+  selection_file_creation:
+    EventID: 11
+    TargetFilename|contains:
+    - .dmp
+    - Desktop\how
+    - Desktop\decrypt
+  selection_registry_modifications:
+    EventID:
+    - 12
+    - 13
+    TargetObject|contains:
+    - UserInitMprLogonScript
+    - \CurrentVersion\Image File Execution Options\
+  selection_registry_run:
+    EventID:
+    - 12
+    - 13
+    TargetObject|contains:
+    - \Microsoft\Windows\CurrentVersion\Run\
+    - \Microsoft\Windows\CurrentVersion\RunOnce\
+    Details|contains:
+    - AppData
+    - \Users\Public\
+    - \Temp\
+    - powershell
+    - wscript
+    - cscript
+  condition: 1 of them

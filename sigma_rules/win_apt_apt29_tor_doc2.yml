@@ -1,0 +1,13 @@
+id: c069f460-2b87-4010-8dcf-e45bab362624
+logsource:
+  category: process_creation
+  product: windows
+detection:
+  process:
+    Image:
+    - C:\Program Files(x86)\Google\GoogleService.exe
+    - C:\Program Files(x86)\Google\GoogleUpdate.exe
+fields:
+- ComputerName
+- User
+- CommandLine
